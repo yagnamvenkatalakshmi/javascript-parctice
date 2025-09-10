@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        margin-top: 18%;
+        background-color: black;
+        color: red;
+    }
+    input{
+        height:4vh;
+        width: 20%;
+        border-radius: 5px;
+    }
+    ::placeholder{
+        color: rgb(7, 91, 5);
+        font-weight: bold;
+    }
+    button{
+        color: rgb(7, 91, 5);
+        font-weight: bold;
+        border-radius: 5px;
+        padding: 0.5%;
+    }
+
+</style>
+<body>
+    <h2>unit converter</h2>
+    <input type="number" placeholder="Enter value" id="input"><br><br>
+    <span>From:</span>
+    <select name="" id="from">
+        <option value="m">Meter</option>
+        <option value="km">Kilometer</option>
+        <option value="cm">centimeter</option>
+        <option value="mm">millimeter</option>
+    </select>
+    <span>To:</span>
+    <select name="" id="to">
+        <option value="m">Meter</option>
+        <option value="km">Kilometer</option>
+        <option value="cm">centimeter</option>
+        <option value="mm">millimeter</option>
+    </select><br><br>
+    <button onclick="calculate()">calculate</button>
+    <script>
+const values={
+    m:1,
+    cm:0.01,
+    mm:0.001,
+    km:1000
+}
+let p=document.createElement("p")
+function calculate(){
+ let val=document.querySelector("input").value
+ let va2=document.querySelector("#from").value
+ let va3=document.querySelector("#to").value
+ let valtom=val*values[va2]
+ let total=valtom/values[va3]
+ p.innerHTML="result:"+" "+total+va3
+ document.body.append(p)
+     }
+    </script>
+</body>
+</html>

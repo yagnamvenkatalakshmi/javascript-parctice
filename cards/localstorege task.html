@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 10%; 
+            margin-left: 40%;
+        }
+        #div{
+            display: flex;
+            border: solid black 4px;
+            width: 350px;
+            height: 200px;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+    <form action="">
+
+        <input type="email" placeholder="Enter email" id="in1"><br><br>
+        <input type="password" placeholder="Enter password" id="in2">
+        <!-- <div class="div1">
+            <button style="margin-right: 33%;">ObjArr</button>
+            <button>Send</button>
+        </div> -->
+    </form>
+</div><br>
+<div class="div1">
+    <button style="margin-right: 33%;" id="bu1">ObjArr</button>
+    <button id="bu2">Send</button>
+</div>
+<script>
+    let ele=document.getElementById("bu1")
+    let li=[]
+    ele.addEventListener("click",function(){
+        ele2=document.getElementById("in1").value
+        ele3=document.getElementById("in2").value
+        let obj={
+            Name:ele2,
+            Email:ele3
+        }
+        li.push(JSON.stringify(obj))
+        document.body.append(li)
+    })
+    console.log(li)
+
+    let ele4=document.getElementById("bu2")
+    ele4.addEventListener("click",function(){
+        ele2=document.getElementById("in1").value
+        ele3=document.getElementById("in2").value
+        localStorage.setItem("email",ele2)
+        localStorage.setItem("Password",ele3)
+        window.open("http://127.0.0.1:5500/cards/linklocalstora.html","_self")
+    })
+
+</script>
+</body>
+</html>

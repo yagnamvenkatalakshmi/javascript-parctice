@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns:33% 33% 33%;
+            column-gap: 2%;
+            row-gap: 1%;
+        }
+        img{
+            height: 27vh;
+            width: 30vw;
+            margin-bottom: 10%;
+            margin:4px 0px 1px 2px ;
+            border-radius: 10px;
+        }
+        #fdiv{
+            border:3px solid rgb(203, 200, 200);
+            background-color:aliceblue;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+        #button{
+         margin-top: 10%;
+         margin-bottom:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+<script>
+        async function fun(){
+    let d=await fetch("https://www.freetestapi.com/api/v1/cars")
+    // let d=await fetch("https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json")
+   let da=await d.json()
+    console.log(da)
+    localStorage.setItem("datass",JSON.stringify(da))
+}
+fun()
+let total=JSON.parse(localStorage.getItem("datass"))
+let getti=document.querySelector("div")
+
+let maping=total.map((val,ind)=>{
+    let im=document.createElement("img")
+im.setAttribute("src",val.image)
+let div=document.createElement("div")
+div.id="fdiv";
+// div.innerHTML=val.id
+let pa=document.createElement("p")
+pa.innerHTML=val.make
+let co=document.createElement("p")
+co.innerHTML=val.price
+let fe=document.createElement("p")
+fe.innerHTML=val.features
+let add=document.createElement("button")
+add.innerHTML="Add to cart"
+add.id="button"; 
+add.addEventListener("click",function(){
+let l=JSON.parse(localStorage.getItem("card")) ||[];  
+l.push(val)
+console.log(l)
+localStorage.setItem("card",JSON.stringify(l))
+})
+div.append(im,pa,co,fe,add)
+getti.append(div)
+})
+    </script>
+</body>
+</html>

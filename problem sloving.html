@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        for(i=1;i<=4;i++){
+            let row=""
+            for(j=1;j<=4;j++){
+            row+="*"
+            }
+            console.log(row)
+        }
+    </script> -->
+    <!-- <script>
+        for(i=1;i<=4;i++){
+            let row=""
+            for(j=1;j<=i;j++){
+            row+="*"
+            }
+            console.log(row)
+        } -->
+    <!-- </script> -->
+
+     <!-- pyramid printing -->
+    <!-- <script>
+        let num=prompt("enter number")
+        let m=parseInt(num/2)
+        let j=num-1
+        for(i=1;i<=m+1;i++){
+        let repp=num-(m+i)
+        let spaces=" ".repeat(num-(m+i))
+         console.log(spaces+"*".repeat(num-j))
+         j-=2
+        }
+    </script> -->
+
+    <!-- pyramid method-2 -->
+    <!-- <script>
+    let row=Number(prompt("noof rows"))
+    for(i=1;i<row+1;i++){
+        let spaces=" ".repeat(row-i)
+        let stars=("*").repeat(2*i-1)
+        console.log(spaces+stars)
+    }
+    </script> -->
+
+    <script>
+        let row=Number(prompt("noof rows"))
+        for(i=1;i<row+1;i++){
+            let spaces=" ".repeat(row-i)
+            let stars=("*"+" ").repeat(i)
+            console.log(spaces+stars)
+        }
+        </script>
+</body>
+</html>

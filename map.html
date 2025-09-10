@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr=[4,5,6]
+        // let arr2=arr.map(function(val,ind,arr){
+        //     return val-2
+        // })
+        // console.log(arr2) 
+                // (or)
+        // let arr=[4,5,6]
+        // let arr2=arr.map((val,ind,arr)=>{
+        //     return val-1
+        // })
+        // console.log(arr2) 
+
+        // let arr=[4,5,6]
+        // let arr2=arr.map(hello)
+        // function hello(va){
+        //     return va>=4
+        // }
+        // console.log(arr2) 
+
+        // let arr=[4,5,6]
+        // sum=0
+        // let arr2=arr.filter(hello)
+        // function hello(va){
+        //     sum+=va
+            // return sum
+        // }
+        // console.log(sum) 
+//task-5 using reduce calculate sum of numbers in list
+        // reduce
+        // let arr=[4,5,6]
+        // arr2=arr.reduce((a,val,ind,arrr)=>{
+        //     return a+val
+        // })
+        // console.log(arr2)
+
+        // task1,2 --double and square the numbers using map
+        // ar=[1,2,3,4]
+        // ar1=ar.map((va)=>{
+        //     return va*2
+        // })
+        // ar3=ar.map((va)=>{
+        //     return va**2
+        // })
+        // console.log(ar1)
+        // console.log(ar3)
+ 
+    // task3--using filter fimd out even number
+    // ar=[1,2,3,4]
+    // ar1=ar.filter((val)=>{
+    //       return val%2==0
+    // })
+    // console.log(ar1)
+
+    //task-4 using filter method filter out the longer wordrs more than 5 words
+    // l=["nivedha","hemanth","hema","mahi"]
+    // ar2=l.filter((va)=>{
+    //     return va.length>5
+    // })
+    // console.log(ar2)
+
+    //task-6 using reduce find average of an array of numbers
+//     ar=[1,2,3,4]
+//     r2=ar.reduce((ac,valu)=>{
+//         return (ac+valu/ar.length)
+//     },0)
+//    console.log(parseInt(r2))
+
+//task-7 filter out adults under 18
+let people=[{"name":"john",age:17},{"name":"mohan",age:30},{"name":"ram","age":18},{"name":"navee","age":25}]
+let p1=people.filter((val)=>{
+    return val.age>=18
+})
+console.log(p1)
+    </script>
+</body>
+</html>

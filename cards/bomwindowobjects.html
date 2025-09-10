@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log(window.document)
+        // console.log(window.innerHeight)
+        // console.log(window.innerWidth)
+        // console.log(window.alert("hi"))
+        // console.log(window.confirm("re u sure"))
+        let m=document.createElement("button")
+        m.innerHTML="open"
+        let c=document.createElement("button")
+        c.innerHTML="close"
+        document.body.append(m,c)
+        m.addEventListener("click",function(){
+            // window.open("https://www.flipkart.com/","_self")
+            window.open("https://www.flipkart.com/","_blank","width=200,height=200")
+        })
+        // c.addEventListener("click",function(){
+        //     window.close()
+        // })
+
+        c.addEventListener("click",function(){
+            if(window.confirm("are u sure?")){
+                window.close()
+            }
+        })
+        
+
+        // console.log(window.alert("welcome"))
+        // if(window.confirm("do to want to procced")){
+        //     console.log(window.alert('confirm'))
+        // }
+        // else{
+        //     console.log(window.alert("do u want to cancel"))
+        // }
+    </script>
+</body>
+</html>

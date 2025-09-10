@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HI</h1>
+    <h1>HELLOO</h1>
+    <div id="div"></div>
+    <script>
+        let email=localStorage.getItem("email")
+        let data=localStorage.getItem("Password")
+        let d=document.getElementById("div")
+        // d.innerText=data
+        // d.innerText=email
+        // d.innerText=`email:${email} data:${data}` 
+        d.innerHTML="email:" + email + "<br>" + "data:" + data;
+        // d.innerHTML = "Email: " + email + "<br>" + "Password: " + data;
+    </script>
+</body>
+</html>
